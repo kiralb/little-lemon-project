@@ -1,4 +1,4 @@
-# little-lemon-project
+# Little Lemon Client Project
 Repository for Coursera/Meta Front-End Development Client Project 
 
 ### Intro for Fictional Client
