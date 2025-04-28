@@ -1,3 +1,4 @@
+/* General */
 body {
     background-color: #EDEFEE;
     font-family: 'Markazi Text', serif;
@@ -15,33 +16,116 @@ h2 {
     font-size: 2rem;
 }
 
-header > img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+p {
+    font-size: 1.25rem;
 }
 
-nav ul {
-    list-style: none;
-    text-align: center;
-}
-
-nav li {
-    display: inline-block;
-}
-
-section {
+/* Header */
+header {
     display: flex;
+    flex-direction: column;
 }
 
-article {
-    flex: 1;    
+header > img {
+    max-width: 33.33%;
+    height: auto;
+    align-self: center;
 }
 
+/* Navigation */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: #4B5E57;
+    border-radius: 2rem;
+    gap: 3rem;
+    padding: 0.75rem 0;
+    margin: 1.5rem 0 0 0;
+    list-style: none;
+}
+
+.nav-links a, article a {
+    text-decoration: none;
+    color: #EDEFEE;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+}
+
+.nav-links a:hover, article a:hover {
+    color:  #4B5E57;
+    background-color: #F2CE3C;
+}
+
+.nav-links a:focus, article a:focus {
+    outline: 2px solid #F2CE3C;
+}
+
+/* Section */
+section {
+    margin: 1.5rem 0;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url(../images/food-stock.jpg);
+    background-position: center;
+    color: #EDEFEE;
+    text-align: center;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+}
+
+/* Columns */
+.columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+article { 
+    flex: 1;
+    text-align: center;
+    background-color: #4B5E57;
+    color: #EDEFEE;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+}
+
+article img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: 50% 75%; 
+}
+
+/* Footer */
 footer {
     display: flex;
+    justify-content: space-between; 
+    color: #4B5E57;
 }
 
-footer div {
+.footer-logo, .footer-copy {
     flex: 1;
+}
+
+.footer-copy {
+    text-align: right;
+}
+
+footer img {
+    width: 56.25px;
+    height: auto;
+}
+
+/*Responsive Design*/
+@media (max-width: 768px) {
+    .columns {
+        flex-direction: column;
+        align-items: center;
+    }
 }
